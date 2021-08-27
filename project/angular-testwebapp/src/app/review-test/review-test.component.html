@@ -1,0 +1,20 @@
+<!-- {{ test | json}}
+{{ answers | json}} -->
+<div *ngIf="test">
+    <h2 class="test-name">{{test.name}} Answers</h2>
+    <ul>
+        <div *ngIf="test.questions">
+            <li *ngFor="let question of test.questions">
+                <h3 class="question"><span class="question-id">{{question.id}}</span> {{question.question}}</h3>
+                <ul class="answers">
+                    <li *ngFor="let answer of question.answers"
+                        [class.correct]="validate(question.id, answer.id) === 'correct'"
+                        [class.incorrect]="validate(question.id, answer.id) === 'incorrect'">
+                        <h4><span class ="answer-id">{{answer.id}})</span> {{answer.answer}}</h4>
+                    </li>
+                    <!-- <li *ngFor="let answer of answers">{{answer.qId}}, {{answer.aId}}</li>                     -->
+                </ul>
+            </li>
+        </div>
+    </ul>
+</div>

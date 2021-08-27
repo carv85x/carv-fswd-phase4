@@ -1,0 +1,57 @@
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 1.5em;
+}
+
+li {
+    list-style-type: none;
+}
+
+.test-name {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large;
+    color:rgb(0, 31, 99);
+}
+.question {
+    background-color:rgb(218, 230, 233);
+    color: black;
+    margin: 0 0 0 0;
+    padding: .1em 0 0 0;
+    width: 35em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.question .question-id {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    background-color: darkcyan;
+    position: relative;
+    padding: 0.5em 0.7em 0.5em 0.7em;
+}
+
+.answers {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0 0 2em 0;
+    padding: 1;
+    width: 30em;
+}
+
+.answers li {
+    cursor:pointer;
+}
+
+.answers li:hover {
+    color: rgb(31, 75, 219);
+    left: .1em;
+}
+
+.answers li.correct {
+    color:white;
+    background-color: rgb(28, 175, 72);
+}
+
+.answers li.incorrect {
+    color:white;
+    background-color: rgb(170, 49, 55);
+}

@@ -1,0 +1,30 @@
+.title {
+    background-color: rgb(59, 132, 192);
+    color: white;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.nav-bar {  
+    overflow: hidden;
+    background-color: rgb(245, 148, 148);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: .5em;
+}
+
+a {
+    padding-left: 1em;
+    padding-top: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    color: white;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+a:hover {
+    background-color: rgb(233, 87, 87);
+}

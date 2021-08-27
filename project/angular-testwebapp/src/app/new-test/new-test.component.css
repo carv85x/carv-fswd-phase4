@@ -1,0 +1,67 @@
+.ng-valid[required], .ng-valid.required  {
+    border-left: 10px solid #3fa544; 
+  }
+  
+.ng-invalid:not(form)  {
+    border-left: 10px solid #9e403e; 
+}
+
+h1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: xx-large;
+  color:rgb(0, 31, 99);
+  padding-left: 1em;
+  margin: .5em;
+}
+
+.test-name {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: xx-large;
+  color:rgb(22, 1, 1);
+  padding-left: 2em;
+  margin: .5em;
+}
+
+.test-name-input {
+  width: 20em;
+  margin: 1em; 
+  padding: .5em; 
+}
+
+.question {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: xx-medium;
+  color:rgb(3, 7, 51);
+  padding-left: 6em;
+}
+
+.question-input {
+  width: 35em;
+  margin: 1em;  
+}
+
+.answer {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: xx-medium;
+  color:rgb(53, 81, 202);
+  padding-left: 7em;
+}
+
+.answer-input {
+  width: 30em;
+  margin: .5em;
+}
+
+.correct-answer {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: xx-medium;
+  color:rgb(53, 81, 202);
+  padding-left: 7em;
+}
+
+.correct-answer-input {
+  width: 5em;
+  margin: .5em;
+  margin-bottom: 1.5em;
+}
+

@@ -1,0 +1,68 @@
+<div class="container">
+    <div [hidden]="submitted">
+        <h1>New Test Form</h1>
+        <form (ngSubmit)="onSubmit()" #testForm="ngForm">
+            <div class="test-name">
+                <label for="name">Test Name </label>
+                <input type="text" class="test-name-input" id="name"
+                        required
+                        [(ngModel)]="testName"
+                        name="testName"
+                        #name="ngModel">
+                <div [hidden]="name.valid || name.pristine"
+                        class="alert alert-danger">
+                    Test Name is required
+                </div>                        
+            </div>
+
+            <div *ngFor="let question of questions" class="form-group">
+                <div class="question">
+                    <label for="question{{question.id}}">Question {{question.id}} </label>
+                    <input type="text" class="question-input" id="question{{question.id}}"
+                            required
+                            [(ngModel)]="questions[question.id-1].question"
+                            name="question{{question.id}}"
+                            #q="ngModel">
+                    <div [hidden]="q.valid || q.pristine"
+                            class="alert alert-danger">
+                        Question #{{question.id}} is required
+                    </div>
+                </div>
+
+                <div *ngFor="let answer of questions[question.id-1].answers" class="form-group">
+                    <div class="answer">
+                        <label for="answer{{answer.id}}">Answer {{answer.id}}</label>
+                        <input type="text" class="answer-input" id="answer{{answer.id}}"
+                                required
+                                [(ngModel)]="questions[question.id-1].answers[getIndex(answer.id)].answer"
+                                name="answer{{answer.id}}"
+                                #a="ngModel">
+                        <div [hidden]="a.valid || a.pristine"
+                                class="alert alert-danger">                            
+                                Answer #{{answer.id}} is required
+                        </div>
+                    </div>
+                </div>
+
+                <div class="correct-answer">
+                    <label for="correctAnswer{{question.id}}">Correct Answer</label>
+                    <select class="correct-answer-input" id="correctAnswer{{question.id}}"
+                            required
+                            [(ngModel)]="questions[question.id-1].correctAnswer"
+                            name="correctAnswer{{question.id}}"
+                            #ca="ngModel">
+                        <option *ngFor="let ca of correctAnswers" [value]="ca">{{ca}}</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <button type="submit" 
+                    class="btn btn-success" 
+                    [disabled]="!testForm.form.valid">Submit</button>
+        </form>
+    </div>
+    <div [hidden] = "!submitted">
+        <h1>Test {{testName}} saved!</h1>
+    </div>
+</div>

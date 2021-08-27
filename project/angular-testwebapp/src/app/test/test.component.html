@@ -1,0 +1,27 @@
+<div [hidden]="submitted">
+    <div *ngIf="test">
+        <h2 class="test-name">{{test.name}} Test</h2>
+        <ul>
+            <div *ngIf="test.questions">
+                <li *ngFor="let question of test.questions">
+                    <h3 class="question"><span class="question-id">{{question.id}}</span> {{question.question}}</h3>
+                    <ul class="answers">
+                        <li *ngFor="let answer of question.answers"
+                            (click)="onSelect(question.id, answer.id)"
+                            [class.selected]="isSelected(question.id, answer.id)">
+                            <h4><span class ="answer-id">{{answer.id}})</span> {{answer.answer}}</h4>
+                        </li>
+                        <!-- <li *ngFor="let answer of answers">{{answer.qId}}, {{answer.aId}}</li>                     -->
+                    </ul>
+                </li>
+            </div>
+        </ul>
+        <button type="button"
+            [disabled]="!isIncomplete()"
+            (click)="onSubmit()">Submit</button>
+    </div>
+</div>
+<div [hidden]="!submitted">
+    <app-review-test [test]="test" [answers]="answers"></app-review-test>
+</div>
+

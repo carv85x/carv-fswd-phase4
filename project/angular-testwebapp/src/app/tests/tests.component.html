@@ -1,0 +1,8 @@
+<h2>Tests</h2>
+<ul class="tests">
+    <li *ngFor="let test of tests">
+        <a routerLink="/test/{{test.id}}">
+        <span class="test-id">{{test.id}}</span> {{test.name}}
+        </a>
+    </li>
+</ul>
